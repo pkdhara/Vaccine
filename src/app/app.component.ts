@@ -28,6 +28,7 @@ export class AppComponent implements OnInit {
     this.tone.src = "../assets/tone.wav";
     this.noOfReq = 0;
     this.reqFailed = 0;
+    this.tone.load();
   }
   ngOnInit(): void {
     this.getStatus();
@@ -119,7 +120,6 @@ export class AppComponent implements OnInit {
   }
 
   playSound() {
-    this.tone.load();
     this.tone.play();
   }
 }
